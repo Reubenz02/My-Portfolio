@@ -1,10 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
-		<title>My Portfolio</title>
-	</head>
-	<body>
-		<h1>My Portfolio</h1>
-		<p>This is a website I can show off to friends and family.</p>
-	</body>
-</html>
+		<meta charset="UFT-8"/>
+        <meta name="viewport" content="width=device-width, intial-scale=1">
+        <title>Artist Discography and Audio Anaylzer</title>
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1> Artist Discography and Audio Analyzer</h1>
+                <p>Search any artist to explore discography stats, release timelines and 30-sec audio previews</p>
+            </header>
+
+            <section class="search-section">
+                <div class="search-bar">
+                     <input type="text" id="artistInput" placeholder="Enter artist name (e.g., Daft Punk)..." value="Daft Punk" />
+                     <button id="searchBtn">Analyze</button>
+                </div>
+                <div class="presents">
+                    <span>Quick picks :</span>
+                    <button class="presetbtn" data-artists="Daft Punk">Daft Punk</button>
+                    <button class="presetbtn" data-artists="Maroon 5">Maroon 5</button>
+                    <button class="presetbtn" data-artists="The Weeknd">The Weeknd</button>
+                    <button class="presetbtn" data-artists="Imagine Dragons">Imagine Dragons</button>
+                </div>
+            </section>
+
+            <div id="statusMsg" class="status-msg"></div>
+            
+            <main id="dashboard" class="hidden">
+              <h2 id="artistHeading">Overview</h2>
+
+              <
+
+
+
