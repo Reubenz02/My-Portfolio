@@ -32,7 +32,41 @@
             <main id="dashboard" class="hidden">
               <h2 id="artistHeading">Overview</h2>
 
-              
+              <div> class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-label">Tracks Analyzed</span>
+                    <span class="stat-value" id="statTracks">0</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-label">Unique Albums</span>
+                    <span class="stat-value" id="statAlbums">0</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-label">Average Lenght</span>
+                    <span class="stat-value" id="statAvgLen">0:00</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-label">Primary Genre</span>
+                    <span class="stat-value" id="statGenre">-</span>
+                </div>
+            </div>
+            
+            <section class="chart-section">
+                <h3> Tracks by Release Year</h3>
+                <div id ="yearchart" class="bar-chart"></div>
+            </section>
+
+            <section class="controls-bar">
+                <select id="albumFilter">
+                    <option value="All">All Albums</option>
+                </select>
+            <select id="sortselect">
+                <option value="default">Sort: Popularity</option>
+                <option value="newest">Sort : Newest First</option>
+                <option value="oldest">Sort : Oldest First</option>
+                <option value="longest">Sort : Longest First</option>
+            </select>
+         </section>
 
 
 
