@@ -12,13 +12,14 @@ async function searchArtist() {
     if (name === "") return;
     statusMsg.textContent = "Loading...";
 
-    const url = `https://apple.com{encodeURIComponent(name)}&entity=song&limit=50`;
 
-    const response = await fetch(url);
+    const response = await fetch(("https://musicbrainz.org/ws/2/recording?query=artist:" + encodeURIComponent(name) + "&fmt=json&limit=50"));
+
     const data = await response.json();
 
-    console.log(data.results);
-    statusMsg.textContent = "Found " + data.results.length + " tracks";
-    updateStats(data.results);
+    console.log(data.recordings);
+   statusMsg.textContent="Found" + data.recordings.length+ "tracks for" + name;
     dashboard.classList.remove("hidden");
 }
+
+searchBtn.addEventListener("click", searchArtist);
