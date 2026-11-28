@@ -12,7 +12,7 @@ async function searchArtist() {
     if (name === "") return;
     statusMsg.textContent = "Loading...";
 
-    const url = "https://apple.com" + encodeURIComponent(name) + "&entity=song&limit=50";
+    const url = `https://apple.com{encodeURIComponent(name)}&entity=song&limit=50`;
 
     const response = await fetch(url);
     const data = await response.json();
